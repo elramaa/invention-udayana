@@ -8,6 +8,7 @@ body {
 /* navbar mode p */
 :root {
   --primary: #ff2e8b;
+  --listprice: #ff2e8b;
   --secondary: #ffd8ea;
 }
 
@@ -19,7 +20,6 @@ body {
   left: 0;
   background: none;
 }
-
 /* search-bar rules */
 input {
   text-align: left;
@@ -207,12 +207,14 @@ aside {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 aside .title {
   height: 3rem;
+  width: 100%;
   display: flex;
+  scale: 0.9;
   align-items: center;
   background-color: #ddd;
   font-size: 1.25rem;
@@ -222,22 +224,26 @@ aside .title {
 
 aside .title p i {
   margin-right: 1rem;
+  font-size: 1.5rem;
+  scale: 0.9;
 }
 
 .promo-card {
-  /* height: 16rem; */
+  height: 16rem;
   width: 100%;
+  scale: 0.9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 1rem;
+  gap: 1rem;
   box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .promo-card .promo-product-name {
   font-size: 1.25rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .promo-card .promo-product-image {
@@ -245,14 +251,15 @@ aside .title p i {
   width: 8rem;
   height: 8rem;
   border: 2px solid black;
+  background-color: #ddd;
 }
 
 .promo-card .promo-discount {
   position: absolute;
   width: 4rem;
   height: 4rem;
-  right: -2rem;
-  top: -2rem;
+  right: -1rem;
+  top: -1rem;
   text-align: center;
   font-weight: 500;
   display: grid;
@@ -278,7 +285,7 @@ aside .title p i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .hot-deals-countdown .title {
@@ -300,6 +307,10 @@ aside .title p i {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+.product-price {
+  margin: 10px;
+  color: var(--listprice);
 }
 
 .hot-deals-countdown .countdown > *:not(.separator) {
@@ -457,15 +468,111 @@ aside .title p i {
 }
 /* phone mode */
 @media screen and (max-width: 720px) {
+  main {
+    grid-template-columns: 100%;
+  }
+  .feed {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .feed .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .feed .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .feed .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .feed .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .feed .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feed .product-image {
+    height: 120px;
+    background-color: #ddd;
+  }
+
+  .feed .product-caption {
+    padding: 0.5rem;
+  }
+
+  .feed .product-name {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .feed .product-price {
+    font-size: 0.8rem;
+    color: #ff2e8b;
+    font-weight: bold;
+  }
+  .hero .side-left {
+    padding: 0;
+    margin: 0px;
+  }
+  .hero {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .hero .side-right {
+    display: none;
+  }
+  .hero .side-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .side-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero .side-left p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero .search-bar {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
   body,
   html {
     padding: 0;
     margin: 0;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-x: hidden;
   }
+
   .desktop-nav {
     display: none;
   }
+
   .mobile-nav {
     display: flex;
     justify-content: space-between;
@@ -480,10 +587,12 @@ aside .title p i {
     z-index: 1000;
     padding: 0 15px;
   }
+
   .menu-toggle {
     font-size: 30px;
     cursor: pointer;
   }
+
   .menu-overlay {
     display: block;
     position: fixed;
@@ -495,28 +604,33 @@ aside .title p i {
     background-color: transparent;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease-in-out;
-    z-index: -1;
+    z-index: 999;
   }
+
   .menu-overlay.active {
-    left: 0; /* Muncul ke dalam layar cuy*/
+    left: 0; /* Muncul ke dalam layar */
   }
+
   .menu-overlay nav {
     display: flex;
     flex-direction: column;
-    padding: 100px 30px 30px;
+    padding: 80px 30px 30px;
     gap: 1.5rem;
     background-color: #fff;
     height: 100vh;
   }
+
   .menu-overlay nav a {
     font-size: 18px;
     color: #333;
     text-decoration: none;
     transition: color 0.2s ease;
   }
+
   .menu-overlay nav a:hover {
     color: var(--primary);
   }
+
   /* Overlay gelap saat menu aktif */
   .menu-backdrop {
     display: none;
@@ -526,11 +640,13 @@ aside .title p i {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 998;
   }
+
   .menu-backdrop.active {
     display: block;
   }
+
   /* Menambahkan gaya untuk user-nav pada mobile-nav */
   .mobile-nav .user-nav {
     display: flex;
@@ -558,10 +674,58 @@ aside .title p i {
   .mobile-nav .user-nav .cart-icon i {
     font-size: 18px;
   }
+
+  /* kategori produk */
+  .categories {
+    padding: 1rem;
+    height: 100%;
+  }
+
+  .categories h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .container-box ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .container-box ul a {
+    width: calc(50% - 0.5rem);
+    font-size: 16px;
+    padding: 1rem 0;
+  }
+
+  .container-box ul a .material-symbols-outlined {
+    font-size: 30px;
+  }
+
+  /* mid aside */
+  aside {
+    padding: 1rem;
+  }
+
+  .promo-card {
+    margin-bottom: 1rem;
+  }
+
+  .hot-deals-countdown {
+    text-align: center;
+  }
+
   .mobile-nav .user-nav a i,
   .hero div,
   section {
-    scale: 0.9s;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-nav .user-nav a i:hover,
+  .hero div:hover,
+  section:hover {
+    transform: scale(1.05);
   }
 }
 @media screen and (min-width: 721px) {
