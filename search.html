@@ -26,7 +26,8 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/search.css" />
     <title>Search Page</title>
   </head>
   <body>
@@ -42,16 +43,183 @@
         <a href="#explore"><i class="bi bi-compass"></i> Explore</a>
       </nav>
       <div class="user-nav">
-        <a href="#search" class="search-icon" aria-label="Search"
-          ><i class="bi bi-search"></i
-        ></a>
-        <a href="#cart" class="cart-icon" aria-label="Shopping Cart"
-          ><i class="bi bi-bag-fill"></i
-        ></a>
-        <a href="#profile" class="profile-icon" aria-label="User Profile"
-          ><i class="bi bi-person-circle"></i
-        ></a>
+        <button href="#search" class="search-icon" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <button href="#cart" class="cart-icon" aria-label="Shopping Cart">
+          <i class="bi bi-bag-fill"></i>
+        </button>
+        <button href="#profile" class="profile-icon" aria-label="User Profile">
+          <i class="bi bi-person-circle"></i>
+        </button>
       </div>
     </header>
+    <section class="hero">
+      <h1 class="title">Top Tech Picks</h1>
+      <div class="carousel">
+        <div class="carousel-image"></div>
+        <div class="carousel-image"></div>
+        <div class="carousel-image"></div>
+        <div class="carousel-indicators">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+    <main>
+      <aside class="filters">
+        <h2 class="section-title">Filter</h2>
+        <div class="filter-accordion-list">
+          <div id="filter-category" class="filter-accordion">
+            <button class="filter-accordion-btn">
+              Category <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="filter-accordion-items">
+              <label class="accordion-item">
+                <input type="checkbox" name="" id="" />
+                Category 1
+              </label>
+              <label class="accordion-item">
+                <input type="checkbox" name="" id="" />
+                Category 2
+              </label>
+            </div>
+          </div>
+          <div id="filter-category" class="filter-accordion">
+            <button class="filter-accordion-btn">
+              Category <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="filter-accordion-items">
+              <label class="accordion-item">
+                <input type="checkbox" name="" id="" />
+                Category 1
+              </label>
+              <label class="accordion-item">
+                <input type="checkbox" name="" id="" />
+                Category 2
+              </label>
+            </div>
+          </div>
+          <div id="filter-category" class="filter-accordion">
+            <button class="filter-accordion-btn">
+              Category <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="filter-accordion-items">
+              <label class="accordion-item">
+                <input type="checkbox" name="" id="" />
+                Category 1
+              </label>
+              <label class="accordion-item">
+                <input type="checkbox" name="" id="" />
+                Category 2
+              </label>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <div class="search-option">
+          <div class="search-input">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search for your need"
+            />
+            <button type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+        <section class="product-list">
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><!-- change this to image later --></div>
+            <div class="product-caption">
+              <h4 class="product-name">Monitor geming</h4>
+              <div class="product-price">IDR Rp 4.999.999,00-</div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="scripts/search_page.js"></script>
   </body>
 </html>

@@ -15,9 +15,11 @@ body {
   box-sizing: border-box;
   border: none;
   margin: 0;
+  padding: 0;
   top: 0;
   left: 0;
   background: none;
+  outline: none;
 }
 /* search-bar rules */
 input {
@@ -47,6 +49,7 @@ header {
   justify-content: space-between;
   align-items: center;
   justify-items: center;
+  /* margin-bottom: 2rem; */
 }
 
 header .icon {
@@ -67,6 +70,12 @@ nav a {
   font-weight: 600;
 }
 
-#user-nav a {
-  color: black !important;
+.user-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.user-nav > * {
+  display: block;
+  font-size: 1.25rem;
 }

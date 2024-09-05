@@ -1,0 +1,151 @@
+.hero {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  padding: 4rem 6rem 4rem 8rem;
+  /* background-color: red; */
+}
+
+.hero .title {
+  width: 40%;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero .carousel {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  border: 2px solid black;
+}
+
+.hero .carousel .carousel-indicators {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 102%;
+  transform: translateX(-50%);
+}
+
+.hero .carousel .carousel-indicators .dot {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  border: 2px solid black;
+}
+
+.hero .carousel .carousel-indicators .dot.active {
+  background-color: black;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 0.75fr 3fr;
+  gap: 2rem;
+}
+
+aside {
+  gap: 1rem;
+}
+
+aside .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.filter-accordion-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.filter-accordion {
+  height: min-content;
+}
+
+.filter-accordion-btn {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.filter-accordion-btn i {
+  transition: all linear 500ms;
+}
+
+.filter-accordion-items {
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  overflow: hidden;
+}
+
+.filter-accordion-btn.active + .filter-accordion-items {
+  height: auto;
+}
+
+.filter-accordion-btn.active i {
+  transform: rotateX(180deg);
+}
+
+.search-option {
+  height: 2.5rem;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.search-input {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+  border: 2px solid black;
+  border-radius: 9999px;
+}
+
+.search-input i {
+  display: block;
+}
+
+.search-input input {
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 12rem 12rem 12rem;
+  gap: 1rem;
+}
+
+.product-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.product-card .product-image {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-color: #ddd;
+}
+
+.product-card .product-caption {
+  padding: 1rem;
+}
