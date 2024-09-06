@@ -5,13 +5,16 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 /* navbar mode p */
 :root {
   --primary: #ff2e8b;
   --listprice: #ff2e8b;
   --secondary: #ffd8ea;
+  --font-text: white;
 }
 
+/* kali semua sama gak enak @ */
 * {
   box-sizing: border-box;
   border: none;
@@ -20,16 +23,50 @@ body {
   left: 0;
   background: none;
 }
+
 /* search-bar rules */
 input {
   text-align: left;
 }
+
 #search-input {
   text-align: left;
 }
+
 h2 {
   font-size: 1.75rem;
   font-weight: 600;
+}
+
+/* image resoucce */
+.img1s {
+  background-image: url(/image_res/image1.jpg);
+  background-size: cover;
+}
+
+.img2s {
+  background-image: url(/image_res/images2.jpg);
+  background-size: cover;
+}
+
+.img3s {
+  background-image: url(/image_res/images3.jpg);
+  background-size: cover;
+}
+
+.img4s {
+  background-image: url(/image_res/images4.jpg);
+  background-size: cover;
+}
+
+.img5s {
+  background-image: url(/image_res/images1.jpg);
+  background-size: cover;
+}
+
+.img6s {
+  background-image: url(/image_res/image6.jpg);
+  background-size: cover;
 }
 
 header {
@@ -73,7 +110,7 @@ nav a {
   gap: 1.5rem;
 }
 
-.user-nav > * {
+.user-nav>* {
   display: block;
   font-size: 1.25rem;
 }
@@ -84,7 +121,7 @@ nav a {
   display: flex;
 }
 
-.hero > div {
+.hero>div {
   width: 50%;
   height: 100%;
   align-content: center;
@@ -284,6 +321,7 @@ aside .title p i {
   background-color: #ddd;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   padding: 3rem;
 }
@@ -292,13 +330,15 @@ aside .title p i {
   text-transform: uppercase;
   color: black;
   line-height: 0.9;
+  text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
 }
 
 .hot-deals-countdown p {
-  color: white;
+  color: rgb(0, 0, 0);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hot-deals-countdown .countdown {
@@ -308,12 +348,13 @@ aside .title p i {
   align-items: center;
   gap: 0.25rem;
 }
+
 .product-price {
   margin: 10px;
   color: var(--listprice);
 }
 
-.hot-deals-countdown .countdown > *:not(.separator) {
+.hot-deals-countdown .countdown>*:not(.separator) {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -365,13 +406,22 @@ aside .title p i {
   text-align: center;
   padding: 1rem;
   border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.8);
   opacity: 0;
-  transition: all linear 200ms 200ms;
+  transition: all 0.3s ease;
 }
 
 .product-card:hover .product-image::after {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+}
+
+.product-card:hover .product-image {
+  filter: brightness(0.8);
+}
+
+.product-card .product-image {
+  transition: filter 0.3s ease;
 }
 
 .product-card .product-caption {
@@ -409,6 +459,7 @@ aside .title p i {
   justify-content: center;
   align-items: center;
 }
+
 /* container product  */
 .container-box {
   width: 100%;
@@ -461,16 +512,26 @@ aside .title p i {
 
 /* fill object */
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings: "FILL"0, "wght"400, "GRAD"0, "opsz"24;
 }
+
 .container-box ul a .material-symbols-outlined {
   font-size: 40px;
 }
+
 /* phone mode */
 @media screen and (max-width: 720px) {
+
+  .hero .side-left h2,
+  .hero .side-left {
+    text-align: center;
+    width: 100%;
+  }
+
   main {
     grid-template-columns: 100%;
   }
+
   .feed {
     width: 100%;
     padding: 1rem;
@@ -529,19 +590,23 @@ aside .title p i {
     color: #ff2e8b;
     font-weight: bold;
   }
+
   .hero .side-left {
     padding: 0;
     margin: 0px;
   }
+
   .hero {
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
   }
+
   .hero .side-right {
     display: none;
   }
+
   .hero .side-left {
     width: 100%;
     text-align: center;
@@ -604,11 +669,11 @@ aside .title p i {
     background-color: transparent;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease-in-out;
-    z-index: 999;
+    z-index: -1;
   }
 
   .menu-overlay.active {
-    left: 0; /* Muncul ke dalam layar */
+    left: 0;
   }
 
   .menu-overlay nav {
@@ -654,8 +719,12 @@ aside .title p i {
     gap: 1rem;
   }
 
+  #cart,
+  #profile {
+    color: #3d00c2;
+  }
+
   .mobile-nav .user-nav a {
-    color: #333;
     font-size: 20px;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -714,6 +783,23 @@ aside .title p i {
 
   .hot-deals-countdown {
     text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hot-deals-countdown h3 {
+    text-align: center;
+    color: black;
+    width: 32%;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .hot-deals-countdown p {
+    color: black;
   }
 
   .mobile-nav .user-nav a i,
@@ -723,12 +809,14 @@ aside .title p i {
   }
 
   .mobile-nav .user-nav a i:hover,
-  .hero div:hover,
+  div:hover,
   section:hover {
-    transform: scale(1.05);
+    transform: scale(1);
   }
 }
+
 @media screen and (min-width: 721px) {
+
   .mobile-nav,
   .menu-overlay,
   .menu-backdrop {

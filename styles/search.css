@@ -1,0 +1,358 @@
+/* Bagian Hero */
+:root {
+  --primary-color: rgb(255, 0, 195);
+  --listprice: #ff2e8b;
+  --secondary-color: #6c7ae0;
+  --tertiary-color: #c3cfe2;
+  --quaternary-color: #f5f7fa;
+}
+
+/* Hero section */
+.hero {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 4rem 6rem;
+  background: linear-gradient(135deg, #ffaaf7 0%, #f486d3 100%);
+}
+
+.hero .title {
+  width: 40%;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero .carousel {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero .carousel .carousel-indicators {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.hero .carousel .carousel-indicators .dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.hero .carousel .carousel-indicators .dot.active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+/* Layout Utama */
+main {
+  display: grid;
+  grid-template-columns: 0.75fr 3fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+/* Sidebar Filter */
+aside {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+aside .section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.filter-accordion-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-accordion {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.5rem;
+}
+
+.filter-accordion-btn {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-accordion-btn i {
+  transition: transform 0.3s ease;
+}
+
+.filter-accordion-items {
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.filter-accordion-btn.active + .filter-accordion-items {
+  height: auto;
+  padding: 0.5rem 0;
+}
+
+.filter-accordion-btn.active i {
+  transform: rotateX(180deg);
+}
+
+/* Opsi Pencarian */
+.search-option {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+  border: 2px solid #ddd;
+  border-radius: 9999px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.484);
+}
+
+.search-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-input button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/* Daftar Produk */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border: 2px solid var(--listprice);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover .product-name {
+  color: black;
+  font-weight: bolder;
+}
+
+.product-card .product-image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.product-card .product-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1);
+}
+
+.product-card .product-caption {
+  padding: 1rem;
+}
+
+.product-card .product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.product-card .product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--listprice);
+}
+
+/* Mode ponsel */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .hero .title {
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .hero .carousel {
+    width: 100%;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    order: 2;
+  }
+
+  .search-option {
+    order: 1;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .categories {
+    padding: 2rem 0;
+  }
+
+  .categories h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .container-box {
+    overflow-x: auto;
+  }
+
+  .container-box ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .container-box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--quaternary-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .container-box a:hover {
+    background-color: var(--tertiary-color);
+    transform: translateY(-5px);
+  }
+
+  .container-box span {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .container-box .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .menu-overlay {
+    width: 100%;
+  }
+
+  .menu-overlay nav {
+    flex-direction: column;
+  }
+
+  .menu-overlay a {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  .desktop-filters {
+    display: none;
+  }
+  .product-card .product-caption .product-price {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-filters {
+    display: none;
+  }
+}
+.filter-accordion label {
+  width: 100%;
+  margin: auto;
+}
