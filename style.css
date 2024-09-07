@@ -537,12 +537,6 @@ aside .title p i {
     justify-content: center;
   }
 
-  .mobile-nav,
-  .menu-overlay,
-  .menu-backdrop {
-    display: none;
-  }
-
   .container-gadget {
     flex-direction: row;
   }
@@ -919,8 +913,13 @@ aside .title p i {
     font-size: 0.9rem;
   }
 }
+@media screen and (min-width: 721px) {
+  .mobile-nav,
+  .menu-overlay,
+  .menu-backdrop {
+    display: none;
+  }
 
-@media screen and(min-width:720px) {
   .hero {
     flex-direction: row;
     justify-content: space-between;
@@ -937,10 +936,6 @@ aside .title p i {
 
   .container-gadget {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .mobile-nav {
-    display: none;
   }
 }
 .footer-end {
@@ -1027,10 +1022,6 @@ aside .title p i {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Responsif untuk layar kecil */
-@media screen and (max-width: 768px) {
 }
 
 /* Top Tech Kategori */
