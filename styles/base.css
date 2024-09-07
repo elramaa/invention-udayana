@@ -5,6 +5,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 /* navbar mode p */
 :root {
   --primary: #ff2e8b;
@@ -21,13 +22,16 @@ body {
   background: none;
   outline: none;
 }
+
 /* search-bar rules */
 input {
   text-align: left;
 }
+
 #search-input {
   text-align: left;
 }
+
 h2 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -75,23 +79,27 @@ nav a {
   gap: 1.5rem;
 }
 
-.user-nav > * {
+.user-nav>* {
   display: block;
   font-size: 1.25rem;
 }
+
 @media screen and (max-width: 768px) {
   main {
     grid-template-columns: 100%;
   }
+
   .desktop-nav {
     display: none;
   }
+
   body,
   html {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
   }
+
   .mobile-nav {
     display: flex;
     justify-content: space-between;
@@ -127,7 +135,8 @@ nav a {
   }
 
   .menu-overlay.active {
-    left: 0; /* Muncul ke dalam layar */
+    left: 0;
+    /* Muncul ke dalam layar */
   }
 
   .menu-overlay nav {
@@ -204,12 +213,14 @@ nav a {
   section:hover {
     transform: scale(1);
   }
+
   .hero {
     margin-top: 4rem;
   }
-  
 }
+
 @media screen and (min-width: 721px) {
+
   .mobile-nav,
   .menu-overlay,
   .menu-backdrop {

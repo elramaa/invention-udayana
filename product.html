@@ -32,35 +32,62 @@
   </head>
 
   <body>
+    <header class="mobile-nav">
+      <div class="menu-toggle">
+        <i class="bi bi-list"></i>
+      </div>
+      <div class="user-nav">
+        <a href="#search" class="search-icon" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </a>
+        <a href="#cart" class="cart-icon" aria-label="Shopping Cart">
+          <i class="bi bi-bag-fill"></i>
+        </a>
+        <a href="#profile" class="profile-icon" aria-label="User Profile">
+          <i class="bi bi-person-circle"></i>
+        </a>
+      </div>
+      <div class="menu-overlay">
+        <nav>
+          <a href="#"><i class="bi bi-laptop"></i> Home</a>
+          <a href="#about"><i class="bi bi-info-circle"></i> About</a>
+          <a href="#news"><i class="bi bi-newspaper"></i> News</a>
+          <a href="./search.html"><i class="bi bi-compass"></i> Explore</a>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-backdrop"></div>
+
+    <!-- Navigasi Desktop -->
     <header class="desktop-nav">
       <div class="logo flex-center">
         <i class="bi bi-laptop"></i>
         <span>CPSTORE</span>
       </div>
       <nav>
-        <a href="#device"><i class="bi bi-laptop"></i> Device</a>
+        <a href="#device"><i class="bi bi-laptop"></i> Home</a>
         <a href="#about"><i class="bi bi-info-circle"></i> About</a>
         <a href="#news"><i class="bi bi-newspaper"></i> News</a>
-        <a href="#explore"><i class="bi bi-compass"></i> Explore</a>
+        <a href="./search.html"><i class="bi bi-compass"></i> Explore</a>
       </nav>
       <div class="user-nav">
-        <button href="#search" class="search-icon" aria-label="Search">
-          <i class="bi bi-search"></i>
-        </button>
-        <button href="#cart" class="cart-icon" aria-label="Shopping Cart">
-          <i class="bi bi-bag-fill"></i>
-        </button>
-        <button href="#profile" class="profile-icon" aria-label="User Profile">
-          <i class="bi bi-person-circle"></i>
-        </button>
+        <a href="#search" class="search-icon" aria-label="Search"
+          ><i class="bi bi-search"></i
+        ></a>
+        <a href="#cart" class="cart-icon" aria-label="Shopping Cart"
+          ><i class="bi bi-bag-fill"></i
+        ></a>
+        <a href="#profile" class="profile-icon" aria-label="User Profile"
+          ><i class="bi bi-person-circle"></i
+        ></a>
       </div>
     </header>
     <div class="product-info">
       <div class="product-images">
         <!-- GANTI INI KE REAL IMAGE NANTI -->
-        <div class="product-image"></div>
-        <div class="product-image"></div>
-        <div class="product-image"></div>
+        <div class="product-image">s</div>
+        <div class="product-image">s</div>
+        <div class="product-image">s</div>
       </div>
       <div class="product-caption">
         <h2 class="product-title">Gaming Laptop</h2>
@@ -85,75 +112,126 @@
           <button class="wish-btn">+ Wishlist</button>
         </div>
       </div>
+      <!-- user info bang -->
+      <div class="kontainer info-tok">
+        <span class="infokan-tokoh">Toko</span>
+        <div class="user_info">
+          <div class="profile-info">
+            <div class="profile-image">
+              <i class="bi bi-shop"></i>
+            </div>
+            <div class="profile-detail">
+              <h4 class="profile-name">Pak Doel</h4>
+              <p class="profile-email">tokopakdoel@gmail.com</p>
+            </div>
+            <br />
+          </div>
+          <div class="kontak">
+            <div class="chat_tokoh">
+              <a href="https://wa.me/6281234567890" target="_blank"
+                ><span class="material-symbols-outlined">
+                  perm_phone_msg
+                </span></a
+              >
+              <span>Chat</span>
+            </div>
+            <div class="chat_whatsapp">
+              <a href="https://wa.me/6281234567890" target="_blank"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <section>
       <h2 class="section-title">Related Products</h2>
       <section class="product-list">
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-image"><!-- change this to image later --></div>
+          <div class="product-image">
+            <!-- change this to image later -->
+          </div>
           <div class="product-caption">
             <h4 class="product-name">Monitor geming</h4>
             <div class="product-price">Rp 4.999.999,00-</div>
