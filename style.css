@@ -523,15 +523,9 @@ aside .title p i {
 @media screen and (max-width: 720px) {
   .hero .search-bar {
     display: inline-block;
-    align-items: center;
   }
-
   .hero .search-bar input {
     width: 100%;
-  }
-  .hero .search-bar button {
-    width: 100%;
-    margin: 20px 0;
   }
   .footer-container {
     flex-direction: column;
